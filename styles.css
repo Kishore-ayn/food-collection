@@ -177,3 +177,69 @@ header.active .navbar a {
   color: var(--main-color);
   letter-spacing: 1px;
 }
+.heading {
+  text-align: center;
+}
+.heading h2 {
+  font-size: 2rem;
+  color: var(--second-color);
+  margin-bottom: 0.5rem;
+}
+.shop-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.shop-box {
+  position: relative;
+  flex: 1 1 17rem;
+  box-shadow: 0 4px 4px rgb(14 55 54 / 15%);
+  border-radius: 0.5rem;
+  height: auto;
+}
+.shop-img {
+  height: 300px;
+  width: 100%px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.shop-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.shop-img img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.shop-box h3{
+  font-size: 1rem;
+  color: var(--second-color);
+  font-weight: 500;
+  padding: 10px;
+}
+.shop-box h2{
+  font-size: 1.2rem;
+  color: var(--main-color);
+  letter-spacing: 1px;
+  padding: 10px;
+}
+.shop-box .bx-cart-add{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 24px;
+  padding: 10px;
+  color: #fff;
+  background: var(--main-color);
+  border-radius: 4px 0 4px 0;
+}
+.shop-box .bx-cart-add:hover {
+  background: var(--second-color);
+}
+
+
