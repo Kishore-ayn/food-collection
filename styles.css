@@ -268,4 +268,83 @@ header.active .navbar a {
   color: var(--main-color);
   letter-spacing: 1px;
 }
-
+.contact-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.contact-info{
+  flex: 1 1 20rem;
+}
+.contact-form{
+  flex: 1 1 20rem;
+  display: flex;
+  justify-content: center;
+}
+.contact-info h2{
+  font-size: 1.7rem;
+  color: var(--second-color);
+}
+.contact-info p{
+  margin: 0.5rem 0 1rem;
+}
+.address{
+  display: flex;
+  flex-direction: column;
+}
+.address i {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+.address span{
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.social{
+  margin-top: 1rem;
+}
+.social a{
+  font-size: 24px;
+  color: var(--main-color);
+  margin-right: 1rem;
+}
+.social a:hover{
+  color: var(--second-color);
+}
+.contact-form form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+form input, textarea{
+  width: 100%;
+  padding: 17px;
+  border-radius: 0.5rem;
+  outline: none;
+  margin-bottom: 1rem;
+  border: 2px solid var(--main-color);
+  box-shadow: 0 4px 4px 2px rgb(14 55 54 / 15%);
+}
+form input::placeholder, 
+textarea::placeholder{
+  color: var(--main-color);
+}
+form textarea{
+  resize: none;
+  height: 150px;
+}
+form .btn{
+  max-width: 100px;
+  text-transform: uppercase;
+  background: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+form .btn:hover{
+  background: var(--second-color);
+}
