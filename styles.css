@@ -185,7 +185,8 @@ header.active .navbar a {
   color: var(--second-color);
   margin-bottom: 0.5rem;
 }
-.shop-container{
+.shop-container,
+.customer-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,5 +242,30 @@ header.active .navbar a {
 .shop-box .bx-cart-add:hover {
   background: var(--second-color);
 }
-
+.customer-container .box{
+  flex: 1 1 16rem;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgb(14 55 54 / 155);
+  padding: 20px;
+  border-radius: 0.5rem;
+}
+.customer-container .box img{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--main-color);
+}
+.box .bx{
+  color: var(--main-color);
+  margin-top: 0.5rem;
+}
+.box p{
+  margin: 0.5rem 0 1rem;
+}
+.box h2{
+  font-size: 1.2rem;
+  color: var(--main-color);
+  letter-spacing: 1px;
+}
 
