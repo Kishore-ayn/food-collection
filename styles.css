@@ -159,6 +159,10 @@ header.active .navbar a {
   object-fit: contain;
   object-position: center;
 }
+.box-img img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
 .about-box {
   flex: 1 1 8rem;
   display: flex;
