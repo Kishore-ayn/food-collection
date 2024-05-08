@@ -1,5 +1,7 @@
 import aboutProducts from "../data/aboutProducts.js";
 import shopProducts from "../data/shopProducts.js";
+import customerReviews from "../data/customerReviews.js";
+import formatCurrency from "./money.js";
 
 let header = document.querySelector('header');
 let menu = document.querySelector('#menu-icon');
@@ -27,7 +29,7 @@ const homeSection =
     <div class="home-img">
       <img src="images/salad.png" alt="">
     </div>
-    `
+    `;
 document.querySelector('#home').innerHTML = homeSection; 
 
 
@@ -41,12 +43,13 @@ aboutProducts.forEach((product) => {
           <img src="${product.image}" alt="">
         </div>
         <h3>${product.name}</h3>
-        <h2>$${product.priceCents}</h2>
+        <h2>$${formatCurrency(product.priceCents)}</h2>
       </div>
   `
+  document.querySelector('.js-about-container').innerHTML = aboutSection;  
 });
 
-document.querySelector('.js-about-container').innerHTML = aboutSection;
+
 
 let shopSection = '';
 
@@ -58,13 +61,55 @@ shopProducts.forEach((product) => {
       <img src="${product.image}" alt="">
     </div>
     <h3>${product.name}</h3>
-    <h2>$${product.priceCents}</h2>
+    <h2>$${formatCurrency(product.priceCents)}</h2>
     <i class='bx bx-cart-add'></i>
   </div>
   `
+  document.querySelector('.js-shop-container').innerHTML = shopSection;
 })
 
-document.querySelector('.js-shop-container').innerHTML = shopSection;
+
+
+let customerSection = '';
+
+customerReviews.forEach((product) => {
+  let starsHTML = '';
+  const filledStars = Math.floor(product.stars);
+  const hasHalfStar = product.stars - filledStars >= 0.5;
+
+  for (let i = 0; i < filledStars; i++) {
+    starsHTML += `<i class='bx bxs-star'></i>`;
+  }
+
+  if (hasHalfStar) {
+    starsHTML += `<i class='bx bxs-star-half'></i>`
+  }
+
+  for (let i = filledStars + (hasHalfStar ? 1 : 0); i < 5; i++) {
+    starsHTML += '<i class="bx bx-star"></i>';
+  }
+
+  customerSection += 
+  `
+  <div class="box">
+    <img src="${product.image}">
+    <div class="stars">
+      ${starsHTML}
+    </div>
+    <p>${product.review}</p>
+    <h2>${product.name}</h2>
+  </div> 
+  `
+  document.querySelector('.js-customer-container').innerHTML = customerSection;
+})
+
+
+
+
+  
+
+
+
 
 
 
